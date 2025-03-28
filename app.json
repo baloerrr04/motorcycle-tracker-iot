@@ -15,6 +15,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.akbaradityah.gpsiot",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBkoXjKBF2J8_vrVDdajadxjHN1jEjq9_U"
+        }
       }
     },
     "web": {
@@ -24,6 +30,16 @@
     },
     "plugins": [
       "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#ffffff",
+          "sounds": [
+            "./assets/notification_sound.wav"
+          ]
+        }
+      ],
       [
         "expo-splash-screen",
         {
@@ -36,6 +52,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f1c21b2e-479a-48d9-8550-8b1dda76dddb"
+      }
     }
   }
 }
